@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number guessing game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+	
+	<div id="grid-container">
+		<div id="info">&quest;
+			<div id="info-text">
+				<p>In this game you have to guess a number between 0-100 (inclusive).</p>
+				<p>This is a learning project, I'll try to convert it to ReactJS.
+					It'll give a nice comparison and insight about ReactJS inner workings and intricacies.</p>
+				<p>Plenty of more features are planned for this simple app. Dark mode, modal menus
+					for start, replay and a coin flip script to decide who's the first to guess.
+					Unfortunately, now you have to refresh the page to start a new game.</p>
+				<p>Responsive design is yet to come, only designed for standard 1920x1080. May work on some smaller screens like 1600 or 1368 without major flaws.
+				<p>The pictures are randomly generated each time a new game starts.</p>
+			</div>
+		</div>
+
+		<img id="player-icon" class="icons" src=""/>
+		<div id="left-log" class="side-logs"></div>
+		<p id="opp-guess" >Opponent's guesses</p>
+
+		<div id="center-log"></div>
+
+		<div id="right-log" class="side-logs"></div>
+		<p id="your-guess">Your guesses</p>
+		<img id="opponent-icon" class="icons" src=""/>
+
+		<input id="guess-input" type="number" min="0" max=100 data-maxlength="3"/>
+		<button id="guess-input-button">Let's try!</button>
+		<p id="no-input-text">Please type your guess!</p>
+	</div>
+
+</body>
+	<script type="text/javascript" src="script.js"></script>
+</html>
