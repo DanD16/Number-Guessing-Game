@@ -7,11 +7,12 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="https://kit.fontawesome.com/9a5a834c1b.js" crossorigin="anonymous"></script>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
-<body>
+<body id="body">
 	
 	<div id="grid-container">
 		<div id="info">&quest;
@@ -36,6 +37,8 @@
 		<div id="right-log" class="side-logs"></div>
 		<p id="your-guess">Your guesses</p>
 		<img id="opponent-icon" class="icons" src=""/>
+
+		<button id="dark-light-switch"><i class="fas fa-moon"></i></button>
 
 		<input id="guess-input" type="number" min="0" max=100 data-maxlength="3"/>
 		<button id="guess-input-button">Let's try!</button>

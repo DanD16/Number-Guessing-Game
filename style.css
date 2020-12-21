@@ -166,6 +166,23 @@ body {
 	width: 15vw;
 }
 
+#dark-light-switch {
+	grid-row: 1 / 2;
+	grid-column: 3 / 4;
+	place-self: start end;
+	margin: 1vw 2vh 0 0;
+	border: 0px;
+	border-radius: 2em;
+	background: #aaa;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.fa-moon {
+	font-size: 30px;
+}
+
+
 @keyframes textIn {
 	0% {
 		transform: translateY(-10px);

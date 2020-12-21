@@ -99,12 +99,12 @@ const mainLog = (i) => {
 		//in vanilla other options for this formatting would've been: function returning a value or
 		//create a span, append the p to span
 		centerLog.appendChild(par);
-		centerLog.lastElementChild.style.color = 'rgb(0, 0, 120)';
+		centerLog.lastElementChild.style.color = 'rgb(0, 100, 200)';
 	} else {
 		highNode = document.createTextNode(`${tooHigh}`);
 		par.appendChild(highNode);
 		centerLog.appendChild(par);
-		centerLog.lastElementChild.style.color = 'rgb(120, 0, 0)';
+		centerLog.lastElementChild.style.color = 'rgb(200, 60, 60)';
 	};
 
 	centerLog.childElementCount === 6 ? centerLog.children[0].remove() : null;
@@ -119,17 +119,17 @@ const sideLog = (i) => {
 		rightLog.appendChild(par);
 		
 		if (guess < secretNumber) {
-			rightLog.lastElementChild.style.color = 'rgb(0, 0, 120)';
+			rightLog.lastElementChild.style.color = 'rgb(0, 100, 200)';
 		} else {
-			rightLog.lastElementChild.style.color = 'rgb(120, 0, 0)';
+			rightLog.lastElementChild.style.color = 'rgb(200, 60, 60)';
 		};
 	} else {
 		leftLog.appendChild(par);
 
 		if (guess < secretNumber) {
-			leftLog.lastElementChild.style.color = 'rgb(0, 0, 120)';
+			leftLog.lastElementChild.style.color = 'rgb(0, 100, 200)';
 		} else {
-			leftLog.lastElementChild.style.color = 'rgb(120, 0, 0)';
+			leftLog.lastElementChild.style.color = 'rgb(200, 60, 60)';
 		};
 	};
 
@@ -203,5 +203,25 @@ const win = (i) => {
 			input.disabled = true;
 			buttonInput.disabled = true;
 		};
+	};
+};
+
+//dark mode
+const darkMode = document.getElementById('dark-light-switch');
+const body = document.getElementById('body');
+const info = document.getElementById('info');
+let isDark = false;
+
+
+darkMode.onclick = () => {
+	if (isDark === true) {
+		body.style.backgroundColor = 'rgba(245, 245, 245, 0.5)';
+		body.style.color = '#000';
+		isDark = false;
+	} else {
+		body.style.backgroundColor = '#282c34';
+		body.style.color = '#fff';
+		info.style.color = '#000';
+		isDark = true;
 	};
 };
